@@ -1,0 +1,70 @@
+#!/bin/bash
+
+sudo netselect-apt --nonfree --sources --ftp `lsb_release -a | grep 'Codename' | awk '{print $2}'`
+sudo cat sources.list >> /etc/apt/sources.list
+sudo rm sources.list
+
+
+# yeah i don't know what i didn't just put them in groups using 
+#  \ instead of with lots of sudo apt-get's ....
+# 
+
+sudo apt-get update
+sudo apt-get -y install build-essential libgtk-3-dev \
+ libgstreamer0.10-dev libclutter-1.0-dev \
+ libwebkitgtk-3.0-dev libgda-5.0-dev
+
+
+sudo apt-get -y install python python3 
+sudo apt-get -y install ipython python-scipy python-matplotlib mayavi2 \
+  python-sympy cython jython python-networkx python-pexpect python-nose \
+  python-setuptools python-sphinx python-pygments python-pip \
+  python-twisted python-foolscap python-tk
+sudo apt-get -y install ruby1.9.1-full golang
+
+sudo apt-get install wine
+dpkg --add-architecture i386
+apt-get update
+apt-get install wine-bin:i386
+
+
+
+sudo apt-get -y install ntop slurm htop git mercurial curl \
+  subversion nmap lftp iperf parallel
+echo "alias network='slurm -i venet0'" >> .bashrc
+echo " # ntop uses 3000 " >> .bashrc
+
+sudo apt-get -y install xserver-xorg libqt4-dev wine
+sudo apt-get -y mplayer deluge deluge-webui deluged deluge-console
+
+git clone git://github.com/joyent/node.git
+cd node
+./configure
+make
+sudo make install
+cd ..
+rm -rf node
+
+#python build bleeding edge versions from source packages
+
+#scikit
+git clone git://github.com/scikit-learn/scikit-learn.git
+cd scikit-learn
+python setup.py build
+sudo python setup.py install
+cd ..
+sudo rm -rf scikit-learn
+
+git clone git://github.com/scikit-image/scikit-image.git
+cd scikit-image
+python setup.py build
+sudo python setup.py install
+cd ..
+sudo rm -rf scikit-image
+
+# install some node packages
+
+npm install underscore
+npm install coffee-script
+npm install async
+npm install colors
