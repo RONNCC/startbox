@@ -12,7 +12,8 @@ sudo rm sources.list
 sudo apt-get update
 sudo apt-get -y install build-essential libgtk-3-dev \
  libgstreamer0.10-dev libclutter-1.0-dev \
- libwebkitgtk-3.0-dev libgda-5.0-dev
+ libwebkitgtk-3.0-dev libgda-5.0-dev \
+ clang
 
 
 sudo apt-get -y install python python3 
@@ -29,8 +30,10 @@ apt-get install wine-bin:i386
 
 
 
-sudo apt-get -y install ntop slurm htop git mercurial curl \
-  subversion nmap lftp iperf parallel
+sudo apt-get -y install ntop slurm htop \
+    git mercurial curl \
+  subversion nmap lftp iperf \
+  parallel hexedit
 echo "alias network='slurm -i venet0'" >> .bashrc
 echo " # ntop uses 3000 " >> .bashrc
 
@@ -68,3 +71,10 @@ npm install underscore
 npm install coffee-script
 npm install async
 npm install colors
+
+# install bashmarks
+git clone git://github.com/huyng/bashmarks.git
+cd bashmarks
+make install
+echo "source ~/.local/bin/bashmarks.sh" >> ~/.bashrc
+rm -rf bashmarks

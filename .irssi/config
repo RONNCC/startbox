@@ -109,12 +109,12 @@ chatnets = {
   Freenode = {
     type = "IRC";
     nick = "Feiu";
-    autosendcmd = "/msg nickserv identify $(IRSSIPASSWORD) ; wait 2000";
+    autosendcmd = "/msg nickserv identify $_IRSSIPASSWORD ; wait 2000";
   };
   Esper = {
     type = "IRC";
     nick = "Feiu";
-    autosendcmd = "/msg nickserv identify $(IRSSIPASSWORD); wait 2000";
+    autosendcmd = "/msg nickserv identify $_IRSSIPASSWORD; wait 2000";
   };
   "#scikit-learn" = { type = "IRC"; };
   "#python" = { type = "IRC"; };
