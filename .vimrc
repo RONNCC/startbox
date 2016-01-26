@@ -12,3 +12,5 @@ set hlsearch            " highlight matches
 
 nnoremap j gj
 nnoremap k gk
+
+nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
