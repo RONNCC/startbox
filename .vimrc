@@ -2,6 +2,9 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 let mapleader=","
 syntax enable
+let g:syntastic_cpp_compiler = 'g++'
+let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
+let g:syntastic_cpp_check_header = 1
 
 
 " set the runtime path to include Vundle and initialize
@@ -20,6 +23,11 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'easymotion/vim-easymotion'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'ervandew/supertab'
+
+
+
 
 
 " plugin from http://vim-scripts.org/vim/scripts.html
@@ -41,6 +49,7 @@ Plugin 'vim-airline/vim-airline-themes'
 call vundle#end()            " required
 
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'scrooloose/syntastic'
 
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
@@ -56,9 +65,9 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 syntax enable           " enable syntax processing
-set tabstop=2       " number of visual spaces per TAB
-set softtabstop=2   " number of spaces in tab when editing
-set shiftwidth=2
+set tabstop=8       " number of visual spaces per TAB
+set softtabstop=4   " number of spaces in tab when editing
+set shiftwidth=4
 set expandtab       " tabs are spaces
 set number              " show line numbers
 set showcmd             " show command in bottom bar
@@ -90,4 +99,20 @@ set foldlevel=99
   let g:ctrlp_use_caching = 0
 endif
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+set switchbuf+=newtab
+" Enable the list of buffers
+let g:airline#extensions#tabline#enabled = 1
+"
+" " Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'
+set shortmess=a
 
+" Find definition of current symbol using Gtags
+map <C-?> <esc>:Gtags -r<CR><CR>
+
+" Find references to current symbol using Gtags
+map <C-F> <esc>:Gtags<CR><CR>
+
+" Go to previous file
+map <C-p> <esc>:bp<CR>
+set smartcase
