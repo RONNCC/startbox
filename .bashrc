@@ -159,3 +159,12 @@ makec()
 }
 export CSCOPE_DB=/home/sghose/co/router/cscope.out
 source ~/.git-completion.bash
+alias ssh='ssh -A'
+export GOPATH=$HOME/privScripts
+export PATH=$PATH:$GOPATH/bin
+
+if hash ag 2>/dev/null; then
+  tag() { command tag "$@"; source ${TAG_ALIAS_FILE:-/tmp/tag_aliases} 2>/dev/null; }
+  alias tag=tag
+fi
+alias note="nc termbin.com 9999"
