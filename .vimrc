@@ -116,4 +116,9 @@ map <C-F> <esc>:Gtags<CR><CR>
 
 " Go to previous file
 map <C-p> <esc>:bp<CR>
+
+set ignorecase		
 set smartcase
+autocmd Filetype html setlocal ts=2 sw=2 expandtab		
+autocmd Filetype ruby setlocal ts=2 sw=2 expandtab		
+autocmd Filetype javascript setlocal ts=2 sw=2 expandtab
