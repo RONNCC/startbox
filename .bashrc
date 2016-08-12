@@ -168,3 +168,23 @@ if hash ag 2>/dev/null; then
   alias tag=tag
 fi
 alias note="nc termbin.com 9999"
+
+#rename remote branch with __old prepended and delete local branch
+gitarchive() 
+{
+    if [ -z "$1" ]
+          then
+              echo "No argument supplied"
+              return
+    fi
+    echo "ARCHIVING $1"
+    archived_name="__old_"$1
+    git push gitrepo $1":"$archived_name
+    git push gitrepo ":"$1
+    git branch -D $1
+}
+
+fixssh() {
+        eval $(tmux show-env    \
+            |sed -n 's/^\(SSH_[^=]*\)=\(.*\)/export \1="\2"/p')
+}
