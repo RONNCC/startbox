@@ -181,10 +181,22 @@ gitarchive()
     archived_name="__old_"$1
     git push gitrepo $1":"$archived_name
     git push gitrepo ":"$1
-    git branch -D $1
+    git branch -d $1
 }
 
 fixssh() {
         eval $(tmux show-env    \
             |sed -n 's/^\(SSH_[^=]*\)=\(.*\)/export \1="\2"/p')
+}
+
+man() {
+	env \
+		LESS_TERMCAP_mb=$(printf "\e[1;31m") \
+		LESS_TERMCAP_md=$(printf "\e[1;31m") \
+		LESS_TERMCAP_me=$(printf "\e[0m") \
+		LESS_TERMCAP_se=$(printf "\e[0m") \
+		LESS_TERMCAP_so=$(printf "\e[1;44;33m") \
+		LESS_TERMCAP_ue=$(printf "\e[0m") \
+		LESS_TERMCAP_us=$(printf "\e[1;32m") \
+			man "$@"
 }
