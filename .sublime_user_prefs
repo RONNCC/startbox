@@ -1,0 +1,33 @@
+{
+	"auto_refresh_rate": 120,
+	"color_scheme": "Packages/Colorsublime - Themes/Material.tmTheme",
+	"folder_exclude_patterns":
+	[
+		"node_modules",
+		"admin_assets",
+		".svn",
+		".git",
+		".hg",
+		"CVS",
+		".*",
+		"build_cryptid",
+		"build_venom",
+		"source_maps",
+		"vendor",
+		"build_ar7100",
+		"build_host",
+		"public",
+		"doc",
+		"meraki_grunt_tasks"
+	],
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"save_on_focus_lost": true,
+	"indent_guide_options": ["draw_active"],
+	"trim_trailing_white_space_on_save": true,
+	"ensure_newline_at_eof_on_save": true,
+	"draw_white_space": "all",
+	"rulers": [120],
+}
