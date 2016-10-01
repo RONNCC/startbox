@@ -9,6 +9,7 @@ git clone git://github.com/huyng/bashmarks.git
 cd bashmarks
 make install
 echo "source ~/.local/bin/bashmarks.sh" >> ~/.bashrc
+cd ..
 rm -rf bashmarks
 
 ##install vim/tmux package managers
