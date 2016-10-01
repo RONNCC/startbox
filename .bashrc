@@ -201,4 +201,4 @@ man() {
 			man "$@"
 }
 
-~/.git-completion.bash
+source ~/.git-completion.bash
