@@ -16,3 +16,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 wget https://raw.githubusercontent.com/RONNCC/startbox/master/git-completion.bash
+wget https://raw.githubusercontent.com/RONNCC/startbox/master/.vimrc
+wget https://raw.githubusercontent.com/RONNCC/startbox/master/.tmux.conf
+wget https://raw.githubusercontent.com/RONNCC/startbox/master/.gitconfig
+wget https://raw.githubusercontent.com/RONNCC/startbox/master/.bashrc
