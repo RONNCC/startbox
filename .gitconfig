@@ -1,5 +1,5 @@
 [user]
-	email = sghose@meraki.com
+	email = rghose@salesforce.com
 	name = Ronnie Ghose
 [svn]
 	rmdir = true
@@ -12,8 +12,8 @@
 [alias]
         b = branch
         #ba = branch -a
-        ci = commit
-        co = checkout
+        co = commit
+        ch = checkout
         d = diff
         dc = diff --cached
         #fp = format-patch
