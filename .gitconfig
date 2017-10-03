@@ -28,6 +28,8 @@
         #mnff = merge --no-ff
         mt = mergetool
         p = format-patch -1
+	re = reset
+	rb = rebase
         serve = !git daemon --reuseaddr --verbose  --base-path=. --export-all ./.git
         sra = svn rebase --all
         sh = !git-sh
