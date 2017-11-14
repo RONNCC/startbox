@@ -1,1 +1,2 @@
-brew install watch
+xcode-select --install
+brew install watch automake iproute2mac
