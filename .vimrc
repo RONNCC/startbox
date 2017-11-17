@@ -122,6 +122,9 @@ autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype javascript setlocal ts=2 sw=2 expandtab
 
+augroup filetypedetect
+    au BufRead,BufNewFile *.jsonnet set filetype=jsonnet
+augroup END
 
 nmap <silent> ∆ :wincmd k<CR>
 nmap <silent> ˚ :wincmd j<CR>
