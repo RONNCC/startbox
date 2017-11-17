@@ -26,9 +26,7 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'ervandew/supertab'
 Plugin 'vim-scripts/click.vim'
-
-
-
+Plugin 'google/vim-jsonnet'
 
 
 " plugin from http://vim-scripts.org/vim/scripts.html
@@ -117,9 +115,15 @@ map <C-F> <esc>:Gtags<CR><CR>
 " Go to previous file
 map <C-p> <esc>:bp<CR>
 
-set ignorecase		
+set ignorecase
 set smartcase
-autocmd Filetype html setlocal ts=2 sw=2 expandtab		
-autocmd Filetype ruby setlocal ts=2 sw=2 expandtab		
-autocmd Filetype javascript setlocal ts=2 sw=2 expandtab
+autocmd Filetype html setlocal ts=2 sw=2 expandtab
+autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+autocmd Filetype javascript setlocal ts=2 sw=2 expandtab
+
+
+nmap <silent> ∆ :wincmd k<CR>
+nmap <silent> ˚ :wincmd j<CR>
+nmap <silent> ˙ :wincmd h<CR>
+nmap <silent> ¬ :wincmd l<CR>
