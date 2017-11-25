@@ -50,7 +50,7 @@ echo "alias network='slurm -i venet0'" >> .bashrc
 echo " # ntop uses 3000 " >> .bashrc
 
 sudo apt-get -y install xserver-xorg libqt4-dev wine
-sudo apt-get -y mplayer deluge deluge-webui deluged deluge-console
+sudo apt-get -y install mplayer deluge deluge-webui deluged deluge-console
 
 git clone git://github.com/joyent/node.git
 cd node
