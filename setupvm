@@ -1,9 +1,14 @@
 #!/bin/bash
 
 
+##### IN ROOT
+
 # make a new user 
 sudo adduser sghose
+visudo # add new user to sudoers
 
+
+#####
 
 #ok lets get the fastest source
 sudo apt-get install netselect-apt
