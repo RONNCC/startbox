@@ -12,7 +12,7 @@ visudo # add new user to sudoers
 
 #ok lets get the fastest source
 sudo apt-get install netselect-apt
-sudo netselect-apt --nonfree --sources --ftp `lsb_release -a | grep 'Codename' | awk '{print $2}'`
+sudo netselect-apt --nonfree --sources `lsb_release -a | grep 'Codename' | awk '{print $2}'`
 sudo cat sources.list >> /etc/apt/sources.list
 sudo rm sources.list
 
