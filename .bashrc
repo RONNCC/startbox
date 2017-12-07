@@ -207,3 +207,11 @@ man() {
 
 
 source ~/.git-completion.bash
+
+#export GOPATH=$HOME/go
+#export GOROOT=/usr/local/opt/go/libexec
+#export PATH=$PATH:$GOPATH/bin
+#export PATH=$PATH:$GOROOT/bin
+
+alias kb="kubectl"
+alias kbc="kubectl --kubeconfig"
