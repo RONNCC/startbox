@@ -162,6 +162,7 @@ source ~/.git-completion.bash
 alias ssh='ssh -A'
 export GOPATH=$HOME/privScripts
 export PATH=$PATH:$GOPATH/bin
+export ANSIBLE_COW_SELECTION=random 
 
 if hash ag 2>/dev/null; then
   tag() { command tag "$@"; source ${TAG_ALIAS_FILE:-/tmp/tag_aliases} 2>/dev/null; }
@@ -203,5 +204,6 @@ man() {
 		LESS_TERMCAP_us=$(printf "\e[1;32m") \
 			man "$@"
 }
+
 
 source ~/.git-completion.bash
