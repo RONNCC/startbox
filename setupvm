@@ -118,7 +118,8 @@ git config --global gpg.program gpg
 #git config --global user.signingkey <your key here>
 
 ### Add git prepare-commit hook
-cat > ~/.git/hooks/prepare-commit-msg <<EOF
+cat > ~/.git/hooks/prepare-commit-msg <<'EOF'
+#!/bin/sh
 
 COMMIT_MSG_FILE=$1
 COMMIT_SOURCE=$2
