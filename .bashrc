@@ -215,6 +215,8 @@ source ~/.git-completion.bash
 
 alias kb="kubectl"
 alias kbc="kubectl --kubeconfig"
+ANSIBLE_COW_SELECTION=random
+
 
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
