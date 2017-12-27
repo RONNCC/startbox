@@ -117,11 +117,21 @@ git config --global gpg.program gpg
 # Do this too https://help.github.com/articles/signing-commits-using-gpg/
 #git config --global user.signingkey <your key here>
 
-### Add signed off trailer
-git config trailer.sign.key "Signed-off-by: "
-git config trailer.sign.ifmissing add
-git config trailer.sign.ifexists doNothing
-git config trailer.sign.command 'echo "$(git config user.name) <$(git config user.email)>"'
-echo "" | git interpret-trailers # Shows you what the signoff looks like.
+### Add git prepare-commit hook
+cat > ~/.git/hooks/prepare-commit-msg <<EOF
+
+COMMIT_MSG_FILE=$1
+COMMIT_SOURCE=$2
+SHA1=$3
+
+@PERL_PATH@ -i.bak -ne 'print unless(m/^. Please enter the commit message/..m/^#$/)' "$COMMIT_MSG_FILE"
+
+SOB=$(git var GIT_COMMITTER_IDENT | sed -n 's/^\(.*>\).*$/Signed-off-by: \1/p')
+git interpret-trailers --if-exists doNothing --in-place --trailer "$SOB" "$COMMIT_MSG_FILE"
+if test -z "$COMMIT_SOURCE"
+then
+  @PERL_PATH@ -i.bak -pe 'print "\n" if !$first_line++' "$COMMIT_MSG_FILE"
+fi
+EOF
 
 kubectl completion bash > $(brew --prefix)/etc/bash_completion.d/kubectl
