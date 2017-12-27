@@ -125,13 +125,13 @@ COMMIT_MSG_FILE=$1
 COMMIT_SOURCE=$2
 SHA1=$3
 
-@PERL_PATH@ -i.bak -ne 'print unless(m/^. Please enter the commit message/..m/^#$/)' "$COMMIT_MSG_FILE"
+/usr/bin/perl -i.bak -ne 'print unless(m/^. Please enter the commit message/..m/^#$/)' "$COMMIT_MSG_FILE"
 
 SOB=$(git var GIT_COMMITTER_IDENT | sed -n 's/^\(.*>\).*$/Signed-off-by: \1/p')
-git interpret-trailers --if-exists doNothing --in-place --trailer "$SOB" "$COMMIT_MSG_FILE"
+git interpret-trailers --in-place --trailer "$SOB" "$COMMIT_MSG_FILE"
 if test -z "$COMMIT_SOURCE"
 then
-  @PERL_PATH@ -i.bak -pe 'print "\n" if !$first_line++' "$COMMIT_MSG_FILE"
+/usr/bin/perl -i.bak -pe 'print "\n" if !$first_line++' "$COMMIT_MSG_FILE"
 fi
 EOF
 
