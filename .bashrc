@@ -223,3 +223,6 @@ alias pbpaste='xsel --clipboard --output'
 if test "$SSH_AUTH_SOCK" ; then
   ln -sf $SSH_AUTH_SOCK ~/.ssh/ssh_auth_sock
 fi
+
+# Clean old branches from remotes.
+alias pruneOldBranches='git fetch --prune --all'
