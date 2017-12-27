@@ -21,7 +21,7 @@
         #fp = format-patch
         g = !git gui &
         lb = log --graph  --show-signature
-        ls = log --graph --pretty=oneline --abbrev-commit  --show-signature
+        ls = log --graph --pretty=oneline --abbrev-commit  --show-signature -n 15
         lc = log ORIG_HEAD.. --stat --no-merges
         k = !gitk &
         ka = !gitk --all &
