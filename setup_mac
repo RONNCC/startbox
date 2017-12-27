@@ -1,2 +1,2 @@
 xcode-select --install
-brew install watch automake iproute2mac bash-completion docker-clean gpg
+brew install watch automake iproute2mac bash-completion docker-clean gpg ripgrep
