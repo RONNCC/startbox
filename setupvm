@@ -117,5 +117,11 @@ git config --global gpg.program gpg
 # Do this too https://help.github.com/articles/signing-commits-using-gpg/
 #git config --global user.signingkey <your key here>
 
+### Add signed off trailer
+git config trailer.sign.key "Signed-off-by: "
+git config trailer.sign.ifmissing add
+git config trailer.sign.ifexists doNothing
+git config trailer.sign.command 'echo "$(git config user.name) <$(git config user.email)>"'
+echo "" | git interpret-trailers # Shows you what the signoff looks like.
 
 kubectl completion bash > $(brew --prefix)/etc/bash_completion.d/kubectl
