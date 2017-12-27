@@ -228,3 +228,5 @@ fi
 
 # Clean old branches from remotes.
 alias pruneOldBranches='git fetch --prune --all'
+
+export GPG_TTY=$(tty)
