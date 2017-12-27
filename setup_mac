@@ -2,7 +2,7 @@ xcode-select --install
 brew update && brew upgrade
 
 # General
-brew install watch automake iproute2mac bash-completion docker-clean gpg git
+brew install watch automake iproute2mac bash-completion docker-clean gpg git perl
 
 # SIMD ripgrep
 brew tap burntsushi/ripgrep https://github.com/BurntSushi/ripgrep.git
