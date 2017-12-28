@@ -32,7 +32,7 @@
         pat = format-patch -1
         re = reset
         rb = rebase
-        fixlast = git commit --fixup HEAD && GIT_SEQUENCE_EDITOR=true git rebase -i --autosquash master
+        fixlast = !git commit --fixup HEAD && GIT_SEQUENCE_EDITOR=true git rebase -i --autosquash master
         serve = !git daemon --reuseaddr --verbose  --base-path=. --export-all ./.git
         sra = svn rebase --all
         sh = !git-sh
