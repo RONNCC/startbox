@@ -1,7 +1,7 @@
 [user]
-    email = $$$<email>$$$
-    name = $$$<name>$$$
-	signingkey = $$$<KEY>$$$
+    email = <EMAIL>
+    name = <NAME>
+    signingkey = <KEY>
 [svn]
     rmdir = true
 [svm]
@@ -31,7 +31,8 @@
         mt = mergetool
         pat = format-patch -1
         re = reset
-        reb = rebase
+        rb = rebase
+        fixlast = git commit --fixup HEAD && GIT_SEQUENCE_EDITOR=true git rebase -i --autosquash master
         serve = !git daemon --reuseaddr --verbose  --base-path=. --export-all ./.git
         sra = svn rebase --all
         sh = !git-sh
