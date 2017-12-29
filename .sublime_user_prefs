@@ -1,6 +1,6 @@
 {
 	"auto_refresh_rate": 120,
-	"color_scheme": "Packages/Colorsublime - Themes/Material.tmTheme",
+	"color_scheme": "Packages/ayu/ayu-light.tmTheme",
 	"folder_exclude_patterns":
 	[
 		"node_modules",
@@ -18,6 +18,7 @@
 		"build_host",
 		"public",
 		"doc",
+		"bin",
 		"meraki_grunt_tasks"
 	],
 	"ignored_packages":
@@ -30,4 +31,6 @@
 	"ensure_newline_at_eof_on_save": true,
 	"draw_white_space": "all",
 	"rulers": [120],
+	"file_exclude_patterns": ["*.swp","*swp*", "*.pyc", "*.pyo", "*.exe", "*.dll", "*.obj","*.o", "*.a", "*.lib", "*.so", "*.dylib", "*.ncb", "*.sdf", "*.suo", "*.pdb", "*.idb", ".DS_Store", "*.class", "*.psd", "*.db", "*.sublime-workspace"],
+
 }
