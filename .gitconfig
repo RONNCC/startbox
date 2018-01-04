@@ -32,7 +32,7 @@
         pat = format-patch -1
         re = reset
         rb = rebase
-        fixup = !export NOTFXPCOM=$(git log  --no-decorate --oneline -n 20 | grep -v 'fixup' | head -n 1 | cut -d' ' -f1) && sh -c "echo "FX"$NOTFXPCOM && git commit --fixup $NOTFXPCOM && GIT_SEQUENCE_EDITOR=true git rebase -i --autosquash $NOTFXPCOM^"
+        fixup = !export NOTFXPCOM=$(git log  --no-decorate --oneline -n 20 | grep -v 'fixup' | head -n 1 | cut -d' ' -f1) && sh -c "echo 'FX'$NOTFXPCOM && git commit --fixup $NOTFXPCOM && GIT_SEQUENCE_EDITOR=true git rebase -i --autosquash $NOTFXPCOM^"
         serve = !git daemon --reuseaddr --verbose  --base-path=. --export-all ./.git
         sra = svn rebase --all
         sh = !git-sh
