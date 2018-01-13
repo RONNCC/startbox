@@ -205,29 +205,21 @@ man() {
 			man "$@"
 }
 
-
 source ~/.git-completion.bash
-
-# export GOPATH=$HOME/go
-# export GOROOT=/usr/local/opt/go/libexec
-# export GIT_HOME=/usr/local/
-# export PATH=${GIT_HOME}/bin:$PATH:$GOPATH/bin:$GOROOT/bin
-
+#export GOROOT=/usr/local/Cellar/go/1.9/bin
+export GOPATH=$HOME/go
+export GOROOT=/usr/local/opt/go/libexec
+export GIT_HOME=/usr/local/
+export PATH=${GIT_HOME}/bin:$PATH:$GOPATH/bin:$GOROOT/bin
+export GPG_TTY=$(tty)
+export ANSIBLE_COW_SELECTION=none
 
 alias kb="kubectl"
 alias kbc="kubectl --kubeconfig"
-ANSIBLE_COW_SELECTION=random
 
-
-alias pbcopy='xsel --clipboard --input'
-alias pbpaste='xsel --clipboard --output'
-
-# Fix SSH auth socket location so agent forwarding works with tmux
-if test "$SSH_AUTH_SOCK" ; then
-  ln -sf $SSH_AUTH_SOCK ~/.ssh/ssh_auth_sock
-fi
-
-# Clean old branches from remotes.
 alias pruneOldBranches='git fetch --prune --all'
+alias dockerimgsrepofmt='docker images --format "{{.Repository}}:{{.Tag}}"'
 
-export GPG_TTY=$(tty)
+
+alias macnotifsound='terminal-notifier -sound default -message'
+alias macnotif='terminal-notifier -message'
