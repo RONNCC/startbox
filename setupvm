@@ -5,6 +5,9 @@
 
 # make a new user 
 sudo adduser auser
+su -
+apt-get install sudo -y
+usermod -aG sudo auser
 visudo # add new user to sudoers
 
 
@@ -13,11 +16,9 @@ visudo # add new user to sudoers
 #ok lets get the fastest source
 sudo apt-get install netselect-apt
 sudo netselect-apt --nonfree --sources `lsb_release -a | grep 'Codename' | awk '{print $2}'`
-sudo cat sources.list >> /etc/apt/sources.list
-sudo rm sources.list
+sudo mv  sources.list  /etc/apt/sources.list
 
-
-# yeah i don't know what i didn't just put them in groups using 
+# yeah i don't know why i didn't just put them in groups using 
 #  \ instead of with lots of sudo apt-get's ....
 # 
 
@@ -42,7 +43,7 @@ apt-get install wine-bin:i386
 
 
 
-sudo apt-get -y install ntop slurm htop \
+sudo apt-get -y install slurm htop \
     git mercurial curl \
   subversion nmap lftp iperf \
   parallel hexedit
