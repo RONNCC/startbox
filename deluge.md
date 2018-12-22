@@ -7,7 +7,7 @@ sudo chsh -s /usr/sbin/nologin deluge
 ```
 
 ```
-cat <<EOF > /etc/systemd/system/deluged.service
+sudo bash -c "cat >/etc/systemd/system/deluged.service" <<'EOF'
 [Unit]
 Description=Deluge Bittorrent Client Daemon
 Documentation=man:deluged
@@ -26,7 +26,7 @@ WantedBy=multi-user.target
 EOF
 ```
 ```
-cat <<EOF > /etc/systemd/system/deluge-web.service
+sudo bash -c "cat >/etc/systemd/system/deluge-web.service" <<'EOF'
 [Unit]
 Description=Deluge Bittorrent Client Web Interface
 Documentation=man:deluge-web
@@ -48,7 +48,7 @@ EOF
 ```
 
 ```
-cat <<EOF > /etc/logrotate.d/deluge
+sudo bash -c "cat >/etc/logrotate.d/deluge" <<'EOF'
 /var/log/deluge/*.log {
         rotate 4
         weekly
