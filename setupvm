@@ -41,7 +41,7 @@ dpkg --add-architecture i386
 apt-get update
 apt-get install wine-bin:i386
 
-
+sudo apt-get install software-properties-common || sudo apt-get install python3-software-properties || sudo apt-get install python-software-properties
 
 sudo apt-get -y install slurm htop \
     git mercurial curl \
