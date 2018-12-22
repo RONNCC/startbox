@@ -1,9 +1,12 @@
 ###  Mostly from: https://dev.deluge-torrent.org/wiki/UserGuide/Service/systemd
 
 ### headless
+```
 apt-get install deluged deluge-web
 sudo chsh -s /usr/sbin/nologin deluge
+```
 
+```
 cat <<EOF > /etc/systemd/system/deluged.service
 [Unit]
 Description=Deluge Bittorrent Client Daemon
@@ -21,7 +24,8 @@ TimeoutStopSec=300
 [Install]
 WantedBy=multi-user.target
 EOF
-
+```
+```
 cat <<EOF > /etc/systemd/system/deluge-web.service
 [Unit]
 Description=Deluge Bittorrent Client Web Interface
@@ -41,7 +45,9 @@ Restart=on-failure
 [Install]
 WantedBy=multi-user.target
 EOF
+```
 
+```
 cat <<EOF > /etc/logrotate.d/deluge
 /var/log/deluge/*.log {
         rotate 4
@@ -57,14 +63,18 @@ cat <<EOF > /etc/logrotate.d/deluge
         endscript
 }
 EOF
-
+```
+```
 sudo mkdir -p /var/log/deluge
 sudo chown -R deluge:deluge /var/log/deluge
 sudo chmod -R 750 /var/log/deluge
+```
 
+```
 sudo systemctl enable /etc/systemd/system/deluged.service
 sudo systemctl start deluged
 sudo systemctl status deluged
 sudo systemctl enable /etc/systemd/system/deluge-web.service
 sudo systemctl start deluge-web
 sudo systemctl status deluge-web
+```
