@@ -1,6 +1,6 @@
-# Mostly from: https://dev.deluge-torrent.org/wiki/UserGuide/Service/systemd
+###  Mostly from: https://dev.deluge-torrent.org/wiki/UserGuide/Service/systemd
 
-# headless
+### headless
 apt-get install deluged deluge-web
 sudo chsh -s /usr/sbin/nologin deluge
 
