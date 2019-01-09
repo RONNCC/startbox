@@ -122,3 +122,6 @@ git config --global gpg.program gpg
 #git config --global user.signingkey <your key here>
 
 kubectl completion bash > $(brew --prefix)/etc/bash_completion.d/kubectl
+
+### optional ###
+# install hexyl: https://github.com/sharkdp/hexyl
