@@ -125,3 +125,7 @@ kubectl completion bash > $(brew --prefix)/etc/bash_completion.d/kubectl
 
 ### optional ###
 # install hexyl: https://github.com/sharkdp/hexyl
+
+# install git-completion.bash and bashmarks
+curl "https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash" -o ~/.git-completion.bash
+git clone git://github.com/huyng/bashmarks.git && cd bashmarks && make install && cd .. && rm -rf bashmarks
