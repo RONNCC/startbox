@@ -5,10 +5,10 @@
 #   git add foo
 #   git autofix HEAD~3
 
-target="$(git rev-parse $1)"
+target="$(git rev-parse HEAD)"
 dirty="$(git diff --name-only --exit-code HEAD)"
 
-git commit --fixup=$target && 
+git commit --fixup=HEAD && 
   ( test -z "$dirty" || git stash ) &&
-  GIT_EDITOR=cat git rebase --interactive --autosquash $target~1 &&
+  GIT_EDITOR=cat git rebase --interactive --autosquash HEAD~1 &&
   ( test -z "$dirty" || git stash pop )
