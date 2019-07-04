@@ -9,6 +9,10 @@ brew install bash
 # General Brew Package Installs
 brew install watch automake iproute2mac bash-completion docker-clean git perl terminal-notifier xclip
 
+# Install bashmarks
+brew tap alexandregz/MXhomebrew
+brew install bashmarks
+
 # SIMD ripgrep
 brew tap burntsushi/ripgrep https://github.com/BurntSushi/ripgrep.git
 brew install burntsushi/ripgrep/ripgrep-bin
