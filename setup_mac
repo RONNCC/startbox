@@ -3,6 +3,7 @@ xcode-select --install
 # /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew update && brew upgrade
 
+
 # General
 brew install watch automake iproute2mac bash-completion docker-clean git perl terminal-notifier xclip
 
@@ -27,3 +28,11 @@ git config --global color.diff.whitespace "red reverse"
 
 ### optional ###
 # install hexyl: https://github.com/sharkdp/hexyl
+
+# Install .bashrc + .vimrc
+curl -o ~/.bashrc https://raw.githubusercontent.com/RONNCC/startbox/master/.bashrc
+curl -o ~/.vimrc https://raw.githubusercontent.com/RONNCC/startbox/master/.vimrc
+
+# Install Vundle Plugins
+vim +PluginInstall +qall
+
