@@ -1,10 +1,12 @@
 xcode-select --install
-# install brew
-# /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+# install homebrew
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew update && brew upgrade
 
+# Update Bash Version on Macs
+brew install bash
 
-# General
+# General Brew Package Installs
 brew install watch automake iproute2mac bash-completion docker-clean git perl terminal-notifier xclip
 
 # SIMD ripgrep
