@@ -10,8 +10,7 @@ brew install bash
 brew install watch automake iproute2mac bash-completion docker-clean git perl terminal-notifier xclip
 
 # Install bashmarks
-brew tap alexandregz/MXhomebrew
-brew install bashmarks
+git clone git://github.com/huyng/bashmarks.git && cd bashmarks && make install && cd .. && rm -rf bashmarks
 
 # SIMD ripgrep
 brew tap burntsushi/ripgrep https://github.com/BurntSushi/ripgrep.git
