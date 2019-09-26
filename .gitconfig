@@ -14,6 +14,7 @@
         a = add
         b = branch
         #ba = branch -a
+	bl = git for-each-ref --sort=-committerdate refs/heads/ --format='%(refname:short): %(authorname) - %(contents:subject)'
         co = commit
         ch = checkout
         d = diff
