@@ -6,6 +6,9 @@ brew update && brew upgrade
 # Update Bash Version on Macs
 brew install bash
 
+# Mac stuff: gnu version of grep; 
+brew install grep
+
 # General Brew Package Installs
 brew install watch automake iproute2mac bash-completion docker-clean git perl terminal-notifier xclip tmux
 
