@@ -44,3 +44,6 @@ curl -o ~/.vimrc https://raw.githubusercontent.com/RONNCC/startbox/master/.vimrc
 # Install Vundle Plugins
 vim +PluginInstall +qall
 
+# Install git fix-last
+curl -o ~/.git-fixlast.sh https://raw.githubusercontent.com/RONNCC/startbox/master/git-fixlast.sh
+
