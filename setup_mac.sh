@@ -4,7 +4,10 @@ xcode-select --install
 brew update && brew upgrade
 
 # Update Bash Version on Macs
-brew install bash bash-completion
+brew install bash
+
+# Git autocompletion
+cp /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash /usr/local/etc/bash_completion.d
 
 # Mac stuff: gnu version of grep; 
 brew install grep
