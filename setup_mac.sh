@@ -13,7 +13,7 @@ cp /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash /u
 brew install grep
 
 # General Brew Package Installs
-brew install watch automake iproute2mac bash-completion docker-clean git perl terminal-notifier xclip tmux
+brew install watch automake iproute2mac bash-completion docker-clean git perl terminal-notifier xclip tmux reattach-to-user-namespace
 
 # Install bashmarks
 git clone git://github.com/huyng/bashmarks.git && cd bashmarks && make install && cd .. && rm -rf bashmarks
