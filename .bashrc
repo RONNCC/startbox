@@ -228,7 +228,7 @@ alias dockerimgsrepofmt='docker images --format "{{.Repository}}:{{.Tag}}"'
 alias macnotifsound='terminal-notifier -sound default -message'
 alias macnotif='terminal-notifier -message'
 
-# make python use mac certifi certifs on requests
-CERT_PATH=$(python -m certifi)
-export SSL_CERT_FILE=${CERT_PATH}
-export REQUESTS_CA_BUNDLE=${CERT_PATH}
+# make python use mac certifi certifs on requests. This makes LI Stuff break b/c doesnt use riddler certs though
+#CERT_PATH=$(python -m certifi)
+#export SSL_CERT_FILE=${CERT_PATH}
+#export REQUESTS_CA_BUNDLE=${CERT_PATH}
