@@ -12,6 +12,10 @@ cp /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash /u
 # Mac stuff: gnu version of grep; 
 brew install grep
 
+## Install fzf fuzzy command line searching + auto complete
+brew install fzf
+$(brew --prefix)/opt/fzf/install
+
 # General Brew Package Installs
 brew install watch automake iproute2mac bash-completion docker-clean git perl terminal-notifier xclip tmux reattach-to-user-namespace
 
