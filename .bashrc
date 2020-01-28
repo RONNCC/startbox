@@ -8,6 +8,16 @@ case $- in
       *) return;;
 esac
 
+unameOut="$(uname -s)"
+case "${unameOut}" in
+    Linux*)     machine=Linux;;
+    Darwin*)    machine=Mac;;
+    CYGWIN*)    machine=Cygwin;;
+    MINGW*)     machine=MinGw;;
+    *)          machine="UNKNOWN:${unameOut}"
+esac
+echo "Running on ${machine}"
+
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
@@ -224,9 +234,12 @@ alias kbc="kubectl --kubeconfig"
 alias pruneOldBranches='git fetch --prune --all'
 alias dockerimgsrepofmt='docker images --format "{{.Repository}}:{{.Tag}}"'
 
-
-alias macnotifsound='terminal-notifier -sound default -message'
-alias macnotif='terminal-notifier -message'
+if [ ${machine} = "Mac" ]; then
+    alias notifsound='terminal-notifier -sound default -message'
+    alias notif='terminal-notifier -message'
+elif [ ${machine} = "Linux" ]; then
+    alias notif='notify-send'
+fi
 
 # make python use mac certifi certifs on requests. This makes LI Stuff break b/c doesnt use riddler certs though
 #CERT_PATH=$(python -m certifi)
