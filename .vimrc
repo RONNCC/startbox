@@ -27,6 +27,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'ervandew/supertab'
 Plugin 'vim-scripts/click.vim'
 Plugin 'google/vim-jsonnet'
+Plugin 'elzr/vim-json'
 
 
 " plugin from http://vim-scripts.org/vim/scripts.html
@@ -124,6 +125,7 @@ autocmd Filetype javascript setlocal ts=2 sw=2 expandtab
 
 augroup filetypedetect
     au BufRead,BufNewFile *.jsonnet set filetype=jsonnet
+    au BufNewFile,BufRead *.json set ft=json
 augroup END
 
 nmap <silent> ∆ :wincmd k<CR>
