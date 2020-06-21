@@ -16,6 +16,9 @@ brew install grep
 brew install fzf
 $(brew --prefix)/opt/fzf/install
 
+## Install mac bluetooth cli
+brew install blueutil
+
 # General Brew Package Installs
 brew install wget watch automake iproute2mac bash-completion docker-clean git perl terminal-notifier xclip tmux reattach-to-user-namespace
 
