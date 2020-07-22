@@ -51,6 +51,9 @@ git config --global color.diff.whitespace "red reverse"
 curl -o ~/.bashrc https://raw.githubusercontent.com/RONNCC/startbox/master/.bashrc
 curl -o ~/.vimrc https://raw.githubusercontent.com/RONNCC/startbox/master/.vimrc
 
+# Download git commit message template
+curl -o ~/.git-commit-message-template https://raw.githubusercontent.com/RONNCC/startbox/master/.vimrc https://raw.githubusercontent.com/RONNCC/startbox/master/.git-commit-message-template
+
 # Install Vundle Plugins
 vim +PluginInstall +qall
 
