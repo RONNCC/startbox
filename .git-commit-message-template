@@ -1,0 +1,18 @@
+########72 characters##################################################
+**RB context:** Try your best to write descriptive summary and description, the reviewer may or may not have the background of your service, so they will rely on what you have in the description (more details refer to RB best practices doc: go/rbBestPractices). 
+
+**List all changes:** 
+ - change 1
+ - change 2
+ - change 3 
+
+**JIRA tickets:** 
+ - ticket 1
+ - ticket 2 
+
+**Lixes used(if applicable, key and link):** 
+ - LIX 1
+ - LIX 2 
+
+**Related RBs:** 
+**RFC:** go/rfcLink 
