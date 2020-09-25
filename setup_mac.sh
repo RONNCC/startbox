@@ -10,7 +10,7 @@ brew install bash
 cp /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash /usr/local/etc/bash_completion.d
 
 # Mac stuff: gnu version of grep and coreutils (e.g. gnuhead)
-brew install grep coreutilss
+brew install grep coreutils findutils
 
 ## Install fzf fuzzy command line searching + auto complete
 brew install fzf
