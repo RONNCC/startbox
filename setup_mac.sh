@@ -12,6 +12,9 @@ cp /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash /u
 # Mac stuff: gnu version of grep and coreutils (e.g. gnuhead)
 brew install grep coreutils findutils
 
+# Install dos2unix used you have windows line endings accidentally (\r\n) instead of unix (\n)
+brew install dos2unix
+
 ## Install fzf fuzzy command line searching + auto complete
 brew install fzf
 $(brew --prefix)/opt/fzf/install
