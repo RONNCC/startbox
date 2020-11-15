@@ -8,6 +8,16 @@ case $- in
       *) return;;
 esac
 
+unameOut="$(uname -s)"	
+case "${unameOut}" in	
+    Linux*)     machine=Linux;;	
+    Darwin*)    machine=Mac;;	
+    CYGWIN*)    machine=Cygwin;;	
+    MINGW*)     machine=MinGw;;	
+    *)          machine="UNKNOWN:${unameOut}"	
+esac	
+echo "Running on ${machine}"
+
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
@@ -169,7 +179,7 @@ export CSCOPE_DB=/home/sghose/co/router/cscope.out
 alias ssh='ssh -A'
 export GOPATH=$HOME/privScripts
 export PATH=$PATH:$GOPATH/bin:/Users/rghose/Library/Python/3.7/bin:/Users/rghose/Library/Python/3.8/bin
-export ANSIBLE_COW_SELECTION=random
+export ANSIBLE_COW_SELECTION=none
 
 if hash ag 2>/dev/null; then
   tag() { command tag "$@"; source ${TAG_ALIAS_FILE:-/tmp/tag_aliases} 2>/dev/null; }
@@ -229,8 +239,12 @@ alias kbc="kubectl --kubeconfig"
 alias pruneOldBranches='git fetch --prune --all'
 alias dockerimgsrepofmt='docker images --format "{{.Repository}}:{{.Tag}}"'
 
-alias macnotifsound='terminal-notifier -sound default -message'
-alias macnotif='terminal-notifier -message'
+if [ ${machine} = "Mac" ]; then	alias macnotifsound='terminal-notifier -sound default -message'
+    alias notifsound='terminal-notifier -sound default -message'
+    alias notif='terminal-notifier -message'	
+elif [ ${machine} = "Linux" ]; then	
+    alias notif='notify-send'	
+fi
 
 alias syncServer3='rsync -aHAXxv --numeric-ids --delete --progress -e "ssh -T -c aes256-gcm@openssh.com -o Compression=no -x" rghose@server3.sghose.me:/home/rghose/Downloads /Users/rghose/Movies/server3'
 
