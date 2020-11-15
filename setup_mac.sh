@@ -24,7 +24,7 @@ $(brew --prefix)/opt/fzf/install
 brew install blueutil
 
 # General Brew Package Installs
-brew install wget watch automake iproute2mac bash-completion docker-clean git perl terminal-notifier xclip tmux reattach-to-user-namespace
+brew install wget watch automake iproute2mac bash-completion docker-clean git perl terminal-notifier xclip tmux reattach-to-user-namespace htop
 
 # Install bashmarks
 git clone git://github.com/huyng/bashmarks.git && cd bashmarks && make install && cd .. && rm -rf bashmarks
