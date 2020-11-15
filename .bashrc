@@ -8,16 +8,6 @@ case $- in
       *) return;;
 esac
 
-unameOut="$(uname -s)"
-case "${unameOut}" in
-    Linux*)     machine=Linux;;
-    Darwin*)    machine=Mac;;
-    CYGWIN*)    machine=Cygwin;;
-    MINGW*)     machine=MinGw;;
-    *)          machine="UNKNOWN:${unameOut}"
-esac
-echo "Running on ${machine}"
-
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
@@ -99,6 +89,7 @@ fi
 #alias ll='ls -l'
 #alias la='ls -A'
 #alias l='ls -CF'
+alias less='less -r' # enable less with color support
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -125,6 +116,7 @@ fi
     [ -f "$(brew --prefix)/etc/bash_completion.d/git-completion.bash" ] && \
         . $(brew --prefix)/etc/bash_completion.d/git-completion.bash
 }
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
 # Make ls use colors
 # define colors
@@ -159,7 +151,7 @@ export PS1="$C_LIGHTGREEN\u$C_DARKGRAY@$C_BLUE\h:\w$C_DARKGRAY\$$C_DEFAULT "
 
 
 alias network='slurm -i venet0'
- # ntop uses 3000 
+ # ntop uses 3000
 export TERM=screen-256color
 shopt -s globstar
 export LC_COLLATE=C
@@ -176,8 +168,8 @@ makec()
 export CSCOPE_DB=/home/sghose/co/router/cscope.out
 alias ssh='ssh -A'
 export GOPATH=$HOME/privScripts
-export PATH=$PATH:$GOPATH/bin
-export ANSIBLE_COW_SELECTION=random 
+export PATH=$PATH:$GOPATH/bin:/Users/rghose/Library/Python/3.7/bin:/Users/rghose/Library/Python/3.8/bin
+export ANSIBLE_COW_SELECTION=random
 
 if hash ag 2>/dev/null; then
   tag() { command tag "$@"; source ${TAG_ALIAS_FILE:-/tmp/tag_aliases} 2>/dev/null; }
@@ -185,11 +177,11 @@ if hash ag 2>/dev/null; then
 fi
 alias note="nc termbin.com 9999"
 
-transfer() { if [ $# -eq 0 ]; then echo "No arguments specified. Usage:\necho transfer /tmp/test.md\ncat /tmp/test.md | transfer test.md"; return 1; fi 
-tmpfile=$( mktemp -t transferXXX ); if tty -s; then basefile=$(basename "$1" | sed -e 's/[^a-zA-Z0-9._-]/-/g'); curl --progress-bar --upload-file "$1" "https://transfer.sh/$basefile" >> $tmpfile; else curl --progress-bar --upload-file "-" "https://transfer.sh/$1" >> $tmpfile ; fi; cat $tmpfile; rm -f $tmpfile; } 
+transfer() { if [ $# -eq 0 ]; then echo "No arguments specified. Usage:\necho transfer /tmp/test.md\ncat /tmp/test.md | transfer test.md"; return 1; fi
+tmpfile=$( mktemp -t transferXXX ); if tty -s; then basefile=$(basename "$1" | sed -e 's/[^a-zA-Z0-9._-]/-/g'); curl --progress-bar --upload-file "$1" "https://transfer.sh/$basefile" >> $tmpfile; else curl --progress-bar --upload-file "-" "https://transfer.sh/$1" >> $tmpfile ; fi; cat $tmpfile; rm -f $tmpfile; }
 
 #rename remote branch with __old prepended and delete local branch
-gitarchive() 
+gitarchive()
 {
     if [ -z "$1" ]
           then
@@ -220,13 +212,16 @@ man() {
 			man "$@"
 }
 
+if [ -f .bashrc.mint.sh ]; then
+     . .bashrc.mint.sh
+fi
+
 #export GOROOT=/usr/local/Cellar/go/1.9/bin
 export GOPATH=$HOME/go
 export GOROOT=/usr/local/opt/go/libexec
 export GIT_HOME=/usr/local/
-export PATH=${GIT_HOME}/bin:$PATH:$GOPATH/bin:$GOROOT/bin
+export PATH=${GIT_HOME}/bin:$PATH:$GOPATH/bin:$GOROOT/bin:/usr/local/linkedin/bin/
 export GPG_TTY=$(tty)
-export ANSIBLE_COW_SELECTION=none
 
 alias kb="kubectl"
 alias kbc="kubectl --kubeconfig"
@@ -234,14 +229,84 @@ alias kbc="kubectl --kubeconfig"
 alias pruneOldBranches='git fetch --prune --all'
 alias dockerimgsrepofmt='docker images --format "{{.Repository}}:{{.Tag}}"'
 
-if [ ${machine} = "Mac" ]; then
-    alias notifsound='terminal-notifier -sound default -message'
-    alias notif='terminal-notifier -message'
-elif [ ${machine} = "Linux" ]; then
-    alias notif='notify-send'
-fi
+alias macnotifsound='terminal-notifier -sound default -message'
+alias macnotif='terminal-notifier -message'
 
-# make python use mac certifi certifs on requests. This makes LI Stuff break b/c doesnt use riddler certs though
+alias syncServer3='rsync -aHAXxv --numeric-ids --delete --progress -e "ssh -T -c aes256-gcm@openssh.com -o Compression=no -x" rghose@server3.sghose.me:/home/rghose/Downloads /Users/rghose/Movies/server3'
+
+alias qeiSSH='ssh -L 20312:localhost:20311 rghose-ld1'
+
+alias vlc='/Applications/VLC.app/Contents/MacOS/VLC'
+
+# make python use mac certifi certifs on requests. also this makes LI stuff break...
 #CERT_PATH=$(python -m certifi)
 #export SSL_CERT_FILE=${CERT_PATH}
 #export REQUESTS_CA_BUNDLE=${CERT_PATH}
+
+alias aspellHtml='aspell check -H --run-together --run-together-limit=4 --ignore-case -d en_US'
+alias rga='rg --no-ignore --hidden --follow'
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+export NODE_OPTIONS="--max-old-space-size=8192" # there so node doesnt run out of memory
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export EDITOR='subl -w'
+
+alias movToMp4='ls *.mov |  xargs -L1 -I{}  basename {} .mov  | xargs -P2 -L1 -I{} ffmpeg -i {}.mov -vcodec h264 -acodec mp2  -crf 20 {}.mp4'
+smallerGif()
+{
+    if [ -z "$1" ]
+          then
+              echo "No argument supplied"
+              return
+    fi
+    basename $1 .gif | xargs -I{} convert {}.gif -fuzz 2% +dither -layers Optimize +map   {}_smaller.gif
+}
+alias restartWifi='sudo ifconfig en0 down; sleep 5; sudo ifconfig en0 up; sleep 5; sudo ifconfig en0 down; sleep 5; sudo ifconfig en0 up;'
+restartBluetooth(){
+    sudo kill `ps -ax | grep "coreaudiod" | grep "sbin" |awk '{print $1}'`;
+    sudo blueutil -p 0; sleep 5; sudo blueutil -p 1; sleep 5; sudo blueutil -p 0; sleep 5; sudo blueutil -p 1
+}
+smallerPdf()
+{
+    if [ -z "$1" ]
+          then
+              echo "No argument supplied"
+              return
+    fi
+    basename -s .pdf "$1" | xargs -I{} gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4  -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile="{}_small.pdf" {}.pdf
+}
+
+MP-updateDeps(){
+    tmpfile=$(mktemp)
+    echo "$tmpfile"
+    exec 3>"$tmpfile"
+    rm "$tmpfile"
+    echo -e "Update dependencies\n\n" >> $tmpfile
+    git ch master && git fetch origin master && git reset --hard origin/master
+    git b -D update_dependencies; git ch -b update_dependencies && yes | mint dependency update -f -a | tail -n +4 | ghead -n -2 >> $tmpfile && git addu && git commit -F $tmpfile
+    echo foo >&3
+}
+MP-runWCTests(){ for i in {1..3}; do mint wc-test --pcs-and-pcl -d "`git log -1 | grep 'RB'` test $i" | grep -oh "https://.*$"; done }
+alias MP-rerunKibitizer='git review update --publish'
+MP-gitReviewCreate(){
+    ./gradlew format spotlessApply;
+    mint format || mint format-last || ./gradlew format || ./gradlew :isGitClean ;
+    git add -u && git ca && mint precommit && git review create  -o -ag -g adserving-reviewers,amdata-reviewers,ad-lift-test-reviewers --no-prompt --bugs `git rev-parse --abbrev-ref HEAD` -p -t "mint build runs\\n\\nwc-tests:\\\\`MP-runWCTests`"
+}
+export -f MP-runWCTests
+export -f MP-gitReviewCreate
+# strip ansi codes before pasting
+alias pasteit='sed "s/\x1b\[[0-9;]*m//g" | pasteit'
+
+# fix pep8 errors
+alias fixpep8='autopep8 --in-place --aggressive '
+
+# apply and commit patch from rbt patch $1 (e.g. 12345)
+alias rbt='rbt patch -c --server https://rb.corp.linkedin.com '
+
+# get largest files/directories
+alias ducks='du -hs * | sort -rh | head -10'
+
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
