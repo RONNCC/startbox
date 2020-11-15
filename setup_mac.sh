@@ -2,6 +2,7 @@ xcode-select --install
 # install homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew update && brew upgrade
+brew analytics off # turn off analytics
 
 # Update Bash Version on Macs
 brew install bash
