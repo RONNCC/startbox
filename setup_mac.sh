@@ -27,6 +27,9 @@ brew cask install xquartz
 ## Install mac bluetooth cli
 brew install blueutil
 
+## Install sshfs to allow mounting remote directories
+brew install sshfs
+
 # General Brew Package Installs
 brew install wget watch automake iproute2mac bash-completion docker-clean git perl terminal-notifier xclip tmux reattach-to-user-namespace htop
 
