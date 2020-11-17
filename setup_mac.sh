@@ -82,4 +82,4 @@ brew install volta
 node -v || volta install node
 npm install -g @ronncc/onetab-syncer
 # Now run it automatically via crontab
-crontab -l | { cat; echo $'00 15 * * 1,3,5 osascript -e \'quit app "Chrome"\'; /Users/rghose/.volta/bin/onetab-syncer sync && ( "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"  --restore-last-session > /dev/null &);' } | crontab -
+crontab -l | { cat; echo $'00 15 * * 1,3,5 osascript -e \'quit app "Chrome"\'; /Users/rghose/.volta/bin/onetab-syncer sync && ( "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"  --restore-last-session > /dev/null &);' ; } | crontab -
