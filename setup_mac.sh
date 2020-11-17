@@ -72,3 +72,14 @@ vim +PluginInstall +qall
 # Install git fix-last
 curl -o ~/.git-fixlast.sh https://raw.githubusercontent.com/RONNCC/startbox/master/git-fixlast.sh
 
+
+
+###
+# Install npm and my onetab syncer because chrome leveldb writes corrupt data, hangs, and then I lose data
+###
+# install npm / volta
+brew install volta
+node -v || volta install node
+npm install -g @ronncc/onetab-syncer
+# Now run it automatically via crontab
+crontab -l | { cat; echo "00 15 * * 1,5 killall Google\ Chrome; onetab-syncer sync"; } | crontab -
