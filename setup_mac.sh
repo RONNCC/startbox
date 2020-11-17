@@ -12,7 +12,7 @@ brew install bash
 cp /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash /usr/local/etc/bash_completion.d
 
 # Mac stuff: gnu version of grep and coreutils (e.g. gnuhead)
-brew install grep coreutils findutils wget
+brew install grep coreutils findutils wget telnet
 
 # Install dos2unix used you have windows line endings accidentally (\r\n) instead of unix (\n)
 brew install dos2unix
