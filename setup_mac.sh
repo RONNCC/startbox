@@ -28,6 +28,7 @@ brew cask install xquartz
 brew install blueutil
 
 ## Install sshfs to allow mounting remote directories
+brew cask install osxfuse
 brew install sshfs
 
 # General Brew Package Installs
