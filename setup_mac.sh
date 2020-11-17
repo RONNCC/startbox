@@ -14,6 +14,9 @@ cp /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash /u
 # Mac stuff: gnu version of grep and coreutils (e.g. gnuhead)
 brew install grep coreutils findutils wget telnet
 
+# Mosh > SSH for intermittent connectivity ( *cough* bart)
+brew install mosh
+
 # Install dos2unix used you have windows line endings accidentally (\r\n) instead of unix (\n)
 brew install dos2unix
 
