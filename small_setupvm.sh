@@ -1,8 +1,11 @@
 #!/bin/sh
 #run in usr home dir // assumes apt
 
+
+sudo apt-get install python-software-properties
+sudo add-apt-repository ppa.keithw/mosh
 sudo apt-get update
-sudo apt-get -y install tmux build-essential 
+sudo apt-get -y install tmux build-essential mosh
 
 ##install vim/tmux package managers
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
