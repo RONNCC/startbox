@@ -1,3 +1,4 @@
+
 xcode-select --install
 # install homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -19,6 +20,9 @@ brew install dos2unix
 ## Install fzf fuzzy command line searching + auto complete
 brew install fzf
 $(brew --prefix)/opt/fzf/install
+
+## Install X11 Server to allow X11 Forwarding
+brew cask install xquartz
 
 ## Install mac bluetooth cli
 brew install blueutil
