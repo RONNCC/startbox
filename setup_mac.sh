@@ -17,6 +17,9 @@ brew install grep coreutils findutils wget telnet
 # Mosh > SSH for intermittent connectivity ( *cough* bart)
 brew install mosh
 
+# Install rclone
+brew install rclone 
+
 # Install dos2unix used you have windows line endings accidentally (\r\n) instead of unix (\n)
 brew install dos2unix
 
