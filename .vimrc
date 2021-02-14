@@ -28,6 +28,8 @@ Plugin 'ervandew/supertab'
 Plugin 'vim-scripts/click.vim'
 Plugin 'google/vim-jsonnet'
 Plugin 'elzr/vim-json'
+Plugin 'flazz/vim-colorschemes'
+
 
 
 " plugin from http://vim-scripts.org/vim/scripts.html
