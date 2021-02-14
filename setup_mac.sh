@@ -78,7 +78,8 @@ curl -o ~/.vimrc https://raw.githubusercontent.com/RONNCC/startbox/master/.vimrc
 # Download git commit message template
 curl -o ~/.git-commit-message-template https://raw.githubusercontent.com/RONNCC/startbox/master/.vimrc https://raw.githubusercontent.com/RONNCC/startbox/master/.git-commit-message-template
 
-# Install Vundle Plugins
+# Install Vundle and Plugins
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
 
 # Install git fix-last
