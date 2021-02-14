@@ -8,6 +8,9 @@ brew analytics off # turn off analytics
 # Update Bash Version on Macs
 brew install bash
 
+# Install iterm2
+brew install --cask iterm2
+
 # Git autocompletion
 cp /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash /usr/local/etc/bash_completion.d
 
