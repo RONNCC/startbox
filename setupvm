@@ -36,10 +36,13 @@ sudo apt-get -y install ipython python-scipy python-matplotlib mayavi2 \
   python-twisted python-foolscap python-tk
 sudo apt-get -y install ruby1.9.1-full golang
 
-sudo apt-get install wine
-dpkg --add-architecture i386
-apt-get update
-apt-get install wine-bin:i386
+### 
+# You don't usually need wine
+### 
+# sudo apt-get -y install wine
+# sudo dpkg --add-architecture i386
+# sudo apt-get update
+# sudo apt-get install -y wine-bin:i386
 
 # install for add-apt-repository
 sudo apt-get install software-properties-common || sudo apt-get install python3-software-properties || sudo apt-get install python-software-properties
