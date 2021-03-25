@@ -56,8 +56,15 @@ sudo apt-get -y install slurm htop \
 echo "alias network='slurm -i venet0'" >> .bashrc
 echo " # ntop uses 3000 " >> .bashrc
 
+
+# for persistant ssh connections
+sudo apt-get install autossh
+
+# for deluge + wine installs
 sudo apt-get -y install xserver-xorg libqt4-dev wine
 sudo apt-get -y install mplayer deluge deluge-webui deluged deluge-console
+
+
 
 git clone git://github.com/joyent/node.git
 cd node
@@ -124,6 +131,7 @@ git config --global gpg.program gpg
 # Do this too https://help.github.com/articles/signing-commits-using-gpg/
 #git config --global user.signingkey <your key here>
 
+# install kubectl bash completion
 kubectl completion bash > $(brew --prefix)/etc/bash_completion.d/kubectl
 
 ### optional ###
