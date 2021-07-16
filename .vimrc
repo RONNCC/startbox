@@ -29,7 +29,7 @@ Plugin 'vim-scripts/click.vim'
 Plugin 'google/vim-jsonnet'
 Plugin 'elzr/vim-json'
 Plugin 'flazz/vim-colorschemes'
-
+Plugin 'derekwyatt/vim-scala'
 
 
 " plugin from http://vim-scripts.org/vim/scripts.html
