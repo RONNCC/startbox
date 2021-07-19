@@ -49,6 +49,10 @@ brew install pipenv
 # Install bashmarks
 git clone git://github.com/huyng/bashmarks.git && cd bashmarks && make install && cd .. && rm -rf bashmarks
 
+# Install diff sitter - an AST based diff tool
+brew tap afnanenayet/tap
+brew install diffsitter
+
 # SIMD ripgrep
 brew tap burntsushi/ripgrep https://github.com/BurntSushi/ripgrep.git
 brew install burntsushi/ripgrep/ripgrep-bin
