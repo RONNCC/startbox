@@ -23,9 +23,6 @@ brew install grep coreutils findutils wget telnet
 # Mosh > SSH for intermittent connectivity ( *cough* bart)
 brew install mosh
 
-# install interactive jq
-brew install jiq
-
 # Install rclone
 brew install rclone 
 
