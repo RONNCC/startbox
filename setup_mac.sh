@@ -11,7 +11,7 @@ brew install bash
 # Install iterm2
 brew install --cask iterm2
 
-# Install jq and fx for json editing
+# Install jq and fx for json editing (fx is like interactive jq)
 brew install jq fx
 
 # Git autocompletion
