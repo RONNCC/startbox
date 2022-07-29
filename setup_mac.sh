@@ -93,6 +93,8 @@ vim +PluginInstall +qall
 curl -o ~/.git-fixlast.sh https://raw.githubusercontent.com/RONNCC/startbox/master/git-fixlast.sh
 
 
+# SpyQL is used for data slicing with a SQL/Python mishmash dialect
+pip install spyql orjson
 
 ###
 # Install npm and my onetab syncer because chrome leveldb writes corrupt data, hangs, and then I lose data
