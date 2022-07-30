@@ -11,8 +11,8 @@ brew install bash
 # Install iterm2
 brew install --cask iterm2
 
-# Install jq and fx for json editing (fx is like interactive jq)
-brew install jq fx
+# Install jq and fx for json editing (fx is like interactive jq), gron makes json grep-able
+brew install jq fx gron
 
 # Git autocompletion
 cp /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash /usr/local/etc/bash_completion.d
