@@ -50,7 +50,7 @@ brew install wget watch automake iproute2mac bash-completion docker-clean git pe
 brew install pipenv
 
 # Install bashmarks
-git clone git://github.com/huyng/bashmarks.git && cd bashmarks && make install && cd .. && rm -rf bashmarks
+pushd .; cd /tmp; git clone https://github.com/huyng/bashmarks.git && cd bashmarks && make install && cd .. && rm -rf bashmarks; popd; 
 
 # Install diff sitter - an AST based diff tool
 brew tap afnanenayet/tap
