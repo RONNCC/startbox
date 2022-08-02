@@ -81,6 +81,7 @@ git config --global color.diff.whitespace "red reverse"
 # Install .bashrc + .vimrc
 curl -o ~/.bashrc https://raw.githubusercontent.com/RONNCC/startbox/master/.bashrc
 curl -o ~/.vimrc https://raw.githubusercontent.com/RONNCC/startbox/master/.vimrc
+curl -o ~/.tmux.conf https://raw.githubusercontent.com/RONNCC/startbox/master/.tmux.conf
 
 # Download git commit message template
 curl -o ~/.git-commit-message-template https://raw.githubusercontent.com/RONNCC/startbox/master/.vimrc https://raw.githubusercontent.com/RONNCC/startbox/master/.git-commit-message-template
