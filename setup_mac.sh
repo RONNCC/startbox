@@ -50,7 +50,7 @@ brew install wget watch automake iproute2mac bash-completion docker-clean git pe
 brew install pipenv
 
 # install handbrake for video converting (mov->mp4)
-brew install handbrake
+# https://handbrake.fr/
 
 # Install bashmarks
 pushd .; cd /tmp; git clone https://github.com/huyng/bashmarks.git && cd bashmarks && make install && cd .. && rm -rf bashmarks; popd; 
