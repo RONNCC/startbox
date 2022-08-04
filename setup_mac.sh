@@ -33,6 +33,10 @@ brew install dos2unix
 brew install fzf
 $(brew --prefix)/opt/fzf/install
 
+# google sheets editing
+pip install gspread
+
+
 ## Install X11 Server to allow X11 Forwarding
 brew cask install xquartz
 
