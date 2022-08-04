@@ -33,8 +33,8 @@ brew install dos2unix
 brew install fzf
 $(brew --prefix)/opt/fzf/install
 
-# google sheets editing
-pip install gspread
+# google sheets editing and also using pandas connector
+pip install gspread gspread-pandas
 
 
 ## Install X11 Server to allow X11 Forwarding
