@@ -100,6 +100,8 @@ vim +PluginInstall +qall
 # Install git fix-last
 curl -o ~/.git-fixlast.sh https://raw.githubusercontent.com/RONNCC/startbox/master/git-fixlast.sh
 
+# Install tmux plugin manager
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # SpyQL is used for data slicing with a SQL/Python mishmash dialect
 pip install spyql orjson
