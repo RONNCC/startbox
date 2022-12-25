@@ -50,6 +50,9 @@ brew cask install osxfuse && brew install sshfs
 # General Brew Package Installs
 brew install wget watch automake iproute2mac bash-completion docker-clean git perl terminal-notifier xclip tmux reattach-to-user-namespace htop
 
+# Install git LFS
+brew install git-lfs
+
 # Pipenv is yarn for python (optional)
 brew install pipenv
 
