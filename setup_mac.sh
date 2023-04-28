@@ -69,6 +69,10 @@ pushd .; cd /tmp; git clone https://github.com/huyng/bashmarks.git && cd bashmar
 brew tap afnanenayet/tap
 brew install diffsitter
 
+# Weird protobuf you need to decode? Use this
+# also website of it: https://mattprecious.github.io/protogram/
+brew install mattprecious/repo/protogram
+
 # SIMD ripgrep
 brew tap burntsushi/ripgrep https://github.com/BurntSushi/ripgrep.git
 brew install burntsushi/ripgrep/ripgrep-bin
