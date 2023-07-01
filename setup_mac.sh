@@ -8,6 +8,9 @@ brew analytics off # turn off analytics
 # Update Bash Version on Macs
 brew install bash
 
+# Install ping but with a graph also
+brew install gping
+
 # Install iterm2
 brew install --cask iterm2
 
