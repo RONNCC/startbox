@@ -17,6 +17,9 @@ brew install --cask iterm2
 # Install jq and fx for json editing (fx is like interactive jq), gron makes json grep-able
 brew install jq fx gron
 
+# Install VLC
+brew install --cask vlc
+
 # Git autocompletion
 cp /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash /usr/local/etc/bash_completion.d
 
