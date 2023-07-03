@@ -12,8 +12,9 @@ brew install bash
 brew install gping
 
 # Install wireshark for analyzing packets
-brew install wireshark
-brew install --cask wireshark
+brew install wireshark # wireshark cli
+brew install --cask wireshark # and the gui
+brew install --cask wireshark-chmodbpf # and additional capture interfaces
 
 # Install iterm2
 brew install --cask iterm2
