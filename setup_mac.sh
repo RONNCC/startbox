@@ -11,6 +11,9 @@ brew install bash
 # Install ping but with a graph also
 brew install gping
 
+# Install wireshark for analyzing packets
+brew install wireshark
+
 # Install iterm2
 brew install --cask iterm2
 
