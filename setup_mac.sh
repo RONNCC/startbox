@@ -13,6 +13,7 @@ brew install gping
 
 # Install wireshark for analyzing packets
 brew install wireshark
+brew install --cask wireshark
 
 # Install iterm2
 brew install --cask iterm2
