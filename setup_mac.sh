@@ -11,6 +11,9 @@ brew install bash
 # Install ping but with a graph also
 brew install gping
 
+# AST-Grep for some tree-sitting code rewriting
+brew install ast-grep
+
 # Install wireshark for analyzing packets
 brew install --cask wireshark # the cli + gui
 brew install --cask wireshark-chmodbpf # and additional capture interfaces
