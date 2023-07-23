@@ -36,7 +36,7 @@ brew install grep coreutils findutils wget telnet
 # Mosh > SSH for intermittent connectivity ( *cough* bart)
 brew install mosh
 
-# Benchmarking tool - does multiple runs and gives average
+# Benchmarking/timing tool - does multiple runs and gives average
 brew install hyperfine
 
 # Install rclone
