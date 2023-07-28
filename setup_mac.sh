@@ -24,6 +24,9 @@ brew install --cask iterm2
 # Install jq and fx for json editing (fx is like interactive jq), gron makes json grep-able
 brew install jq fx gron
 
+# Install dasel for JQ/YQ for  JSON, YAML, TOML, XML and CSV with zero runtime dependencies
+brew install dasel
+
 # Install VLC
 brew install --cask vlc
 
