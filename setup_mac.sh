@@ -11,6 +11,29 @@ brew install bash
 # Install ping but with a graph also
 brew install gping
 
+# Better unix tool alternatives (from https://github.com/ibraheemdev/modern-unix) 
+### Bat = cat /w syntax highlighting and line numbers
+### exa = ls  /w colors + git aware
+### delta = diff /w syntax-aware diffs + colors
+### duf = du + colors, organization, human readable
+### broot = tree /w better organization 
+### fd = high performance find /w easier syntax
+### ripgrep = high performance + parallel grep
+### mcfly = better ctrl-r bash history
+### tldr = actually readable man pages
+### choose = easier to use cut (sometimes) ... like regex splitting
+### bottom = top with more info and graphs. (could also use gtop or glances)
+### hyperfine = `time` but better /w parameters for benchmarking commands
+### gping = ping /w a graph
+### httpie = friendly + more terse curl alternative (curlie is like httpie+curl if that's preferred)
+### dog = much nicer than dig command and more detailed
+### z = a smart cd that auto-remembers where you went in the past and get you there fast
+brew install bat exa git-delta duf broot fd ripgrep tldr bottom hyperfine gping httpie dog zoxide
+brew tap cantino/mcfly && brew install cantino/mcfly/mcfly
+grep -q 'eval "$(mcfly init bash)"' ~/.bashrc || echo 'eval "$(mcfly init bash)"' >> ~/.bashrc # add it if it doesnt exist (makes overall op idempotent)
+
+
+
 # AST-Grep for some tree-sitting code rewriting
 brew install ast-grep
 
