@@ -32,7 +32,8 @@ brew install bat exa git-delta duf broot fd ripgrep tldr bottom hyperfine gping 
 brew tap cantino/mcfly && brew install cantino/mcfly/mcfly
 grep -q 'eval "$(mcfly init bash)"' ~/.bashrc || echo 'eval "$(mcfly init bash)"' >> ~/.bashrc # add it if it doesnt exist (makes overall op idempotent)
 
-
+# better bash/general autocomplete
+brew install fig
 
 # AST-Grep for some tree-sitting code rewriting
 brew install ast-grep
@@ -56,14 +57,11 @@ brew install --cask vlc
 # Git autocompletion
 cp /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash /usr/local/etc/bash_completion.d
 
-# Mac stuff: gnu version of grep and coreutils (e.g. gnuhead)
+# Mac stuff: gnu version of grep and coreutils (e.g. gnuhead); this is because mac's have slightly different versions /w different options shipped.
 brew install grep coreutils findutils wget telnet
 
 # Mosh > SSH for intermittent connectivity ( *cough* bart)
 brew install mosh
-
-# Benchmarking/timing tool - does multiple runs and gives average
-brew install hyperfine
 
 # Install rclone
 brew install rclone 
@@ -77,7 +75,6 @@ $(brew --prefix)/opt/fzf/install
 
 # google sheets editing and also using pandas connector
 pip install gspread gspread-pandas
-
 
 ## Install X11 Server to allow X11 Forwarding
 brew cask install xquartz
@@ -131,8 +128,8 @@ git config --global color.diff.old        "red bold"
 git config --global color.diff.new        "green bold"
 git config --global color.diff.whitespace "red reverse"
 
-### optional ###
-# install hexyl: https://github.com/sharkdp/hexyl
+# hexyl is a really nice hex data viewer
+brew install hexyl
 
 # Install .bashrc + .vimrc
 curl -o ~/.bashrc https://raw.githubusercontent.com/RONNCC/startbox/master/.bashrc
