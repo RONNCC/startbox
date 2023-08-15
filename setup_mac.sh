@@ -8,8 +8,9 @@ brew analytics off # turn off analytics
 # Update Bash Version on Macs
 brew install bash
 
-# Install ping but with a graph also
-brew install gping
+# Raycast > Mac's Spotlight and like Alfred
+brew install --cask raycast
+
 
 # Better unix tool alternatives (from https://github.com/ibraheemdev/modern-unix) 
 ### Bat = cat /w syntax highlighting and line numbers
@@ -28,7 +29,8 @@ brew install gping
 ### httpie = friendly + more terse curl alternative (curlie is like httpie+curl if that's preferred)
 ### dog = much nicer than dig command and more detailed
 ### z = a smart cd that auto-remembers where you went in the past and get you there fast
-brew install bat exa git-delta duf broot fd ripgrep tldr bottom hyperfine gping httpie dog zoxide
+### gping = like ping with graphs
+brew install bat exa git-delta duf broot fd ripgrep tldr bottom hyperfine gping httpie dog zoxide gping
 brew tap cantino/mcfly && brew install cantino/mcfly/mcfly
 grep -q 'eval "$(mcfly init bash)"' ~/.bashrc || echo 'eval "$(mcfly init bash)"' >> ~/.bashrc # add it if it doesnt exist (makes overall op idempotent)
 
