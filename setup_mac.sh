@@ -66,7 +66,7 @@ brew install grep coreutils findutils wget telnet
 brew install mosh
 
 # Install rclone
-brew install rclone 
+sudo -v ; curl https://rclone.org/install.sh | sudo bash # the brew formula doesn't install the FUSE drivers needed
 
 # Install dos2unix used you have windows line endings accidentally (\r\n) instead of unix (\n)
 brew install dos2unix
