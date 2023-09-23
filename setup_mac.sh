@@ -40,6 +40,9 @@ brew install fig
 # AST-Grep for some tree-sitting code rewriting
 brew install ast-grep
 
+# Easily transfer an encrypted file to another computer via relay 
+brew install croc
+
 # Install wireshark for analyzing packets
 brew install --cask wireshark # the cli + gui
 brew install --cask wireshark-chmodbpf # and additional capture interfaces
