@@ -34,6 +34,9 @@ brew install bat exa git-delta duf broot fd ripgrep tldr bottom hyperfine gping 
 brew tap cantino/mcfly && brew install cantino/mcfly/mcfly
 grep -q 'eval "$(mcfly init bash)"' ~/.bashrc || echo 'eval "$(mcfly init bash)"' >> ~/.bashrc # add it if it doesnt exist (makes overall op idempotent)
 
+# pdf grep
+brew install pdfgrep
+
 # better bash/general autocomplete
 brew install fig
 
