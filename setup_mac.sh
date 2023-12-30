@@ -34,6 +34,15 @@ brew install bat exa git-delta duf broot fd ripgrep tldr bottom hyperfine gping 
 brew tap cantino/mcfly && brew install cantino/mcfly/mcfly
 grep -q 'eval "$(mcfly init bash)"' ~/.bashrc || echo 'eval "$(mcfly init bash)"' >> ~/.bashrc # add it if it doesnt exist (makes overall op idempotent)
 
+# Install Rust (and Cargo)
+brew install rustup
+### this downloads + installs a bunch 
+rustup-init --profile default -y 
+
+# Install a ripgrep output-compatible string replace (because sed is a headache sometimes)
+#    https://blog.robenkleene.com/2023/12/26/introducing-rep-ren/
+cargo install ren-find rep-grep
+
 # pdf grep
 brew install pdfgrep
 
