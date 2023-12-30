@@ -77,6 +77,9 @@ cp /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash /u
 # Mac stuff: gnu version of grep and coreutils (e.g. gnuhead); this is because mac's have slightly different versions /w different options shipped.
 brew install grep coreutils findutils wget telnet
 
+# also then install moreutils which has vidir and execsnoop (https://jpospisil.com/2023/12/19/the-hidden-gems-of-moreutils)
+brew install moreutils
+
 # Mosh > SSH for intermittent connectivity ( *cough* bart)
 brew install mosh
 
