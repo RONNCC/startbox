@@ -78,7 +78,15 @@ cp /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash /u
 brew install grep coreutils findutils wget telnet
 
 # also then install moreutils which has vidir and execsnoop (https://jpospisil.com/2023/12/19/the-hidden-gems-of-moreutils)
-brew install moreutils
+# but we also want gnu parallel and these break each other (https://superuser.com/questions/545889/how-can-i-install-gnu-parallel-alongside-moreutils)
+brew unlink moreutils
+brew install parallel
+brew link --overwrite moreutils
+brew unlink parallel
+brew link --overwrite parallel
+
+
+
 
 # Mosh > SSH for intermittent connectivity ( *cough* bart)
 brew install mosh
