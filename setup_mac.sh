@@ -86,6 +86,14 @@ brew unlink parallel
 brew link --overwrite parallel
 
 
+# Install pipx for installing python "apps"
+brew install pipx
+pipx ensurepath
+
+
+# Install "toolong" terminal log viewer (https://github.com/Textualize/toolong)
+pipx install toolong
+
 
 
 # Mosh > SSH for intermittent connectivity ( *cough* bart)
