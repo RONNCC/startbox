@@ -11,6 +11,8 @@ brew install bash
 # Raycast > Mac's Spotlight and like Alfred
 brew install --cask raycast
 
+# install spotify for music
+brew install --cask spotify
 
 # Better unix tool alternatives (from https://github.com/ibraheemdev/modern-unix) 
 ### Bat = cat /w syntax highlighting and line numbers
