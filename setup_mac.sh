@@ -170,6 +170,7 @@ git config --global color.diff.new        "green bold"
 git config --global color.diff.whitespace "red reverse"
 
 # hexyl is a really nice hex data viewer
+# there's also ImHex though
 brew install hexyl
 
 # Install .bashrc + .vimrc
