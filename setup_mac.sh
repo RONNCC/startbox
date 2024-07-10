@@ -150,10 +150,6 @@ brew install diffsitter
 # also website of it: https://mattprecious.github.io/protogram/
 brew install mattprecious/repo/protogram
 
-# SIMD ripgrep
-brew tap burntsushi/ripgrep https://github.com/BurntSushi/ripgrep.git
-brew install burntsushi/ripgrep/ripgrep-bin
-
 # Install diff-so-fancy
 brew install diff-so-fancy
 git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
