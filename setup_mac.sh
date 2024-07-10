@@ -116,14 +116,14 @@ $(brew --prefix)/opt/fzf/install
 pip install gspread gspread-pandas
 
 ## Install X11 Server to allow X11 Forwarding
-brew cask install xquartz
+brew install --cask xquartz
 
 ## Install mac bluetooth cli
 brew install blueutil
 
 ## Install sshfs to allow mounting remote directories
 # this may fail depending on privileges, so you may need to install manually from https://github.com/osxfuse/sshfs/releases
-brew cask install osxfuse && brew install sshfs 
+brew install --cask osxfuse && brew install sshfs 
 
 # General Brew Package Installs
 brew install wget watch automake iproute2mac bash-completion docker-clean git perl terminal-notifier xclip tmux reattach-to-user-namespace 
