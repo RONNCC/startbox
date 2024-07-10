@@ -40,6 +40,7 @@ grep -q 'eval "$(mcfly init bash)"' ~/.bashrc || echo 'eval "$(mcfly init bash)"
 brew install rustup
 ### this downloads + installs a bunch 
 rustup-init --profile default -y 
+. "$HOME/.cargo/env" # now reload the cargo path
 
 # Install a ripgrep output-compatible string replace (because sed is a headache sometimes)
 #    https://blog.robenkleene.com/2023/12/26/introducing-rep-ren/
