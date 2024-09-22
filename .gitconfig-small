@@ -1,0 +1,24 @@
+[user]
+    name = Ronnie Ghose
+    email = ronnie.ghose@gmail.com
+
+[alias]
+   # only add non whitespace changes
+   anw = ! git diff -U0 -w --no-color | git apply --cached --ignore-whitespace --unidiff-zero - && git checkout .
+   addu = add -u
+   rbi = ! git stash push && git rebase -i --autosquash HEAD~5 && git stash pop
+   pr = ! git fetch origin master:master && git pull --rebase origin master
+   s = status
+   b = branch  --sort=-committerdate 
+   bl = "!f() { git for-each-ref --sort=-committerdate refs/heads/ --format='%(refname:short): %(authorname) - %(contents:subject)' | ggrep --color=always -z `git symbolic-ref --short HEAD`  ; }; f"
+   cherry = cherry-pick
+   cherrypick = cherry-pick
+   ch = checkout
+   # undo ca https://stackoverflow.com/questions/1459150/how-to-undo-git-commit-amend-done-instead-of-git-commit/1459264
+   uca = ! git reset --soft HEAD@{1} && git commit -C HEAD@{1} && git commit --amend  --date "$(date)" --author="$(git config --global user.name)<$(git config --global user.email)>"
+   ca = commit -a --amend -C HEAD
+   co = commit
+   com = commit -m
+   t = tag
+   git = !exec git
+   np = !exec git --no-pager
