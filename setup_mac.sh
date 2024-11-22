@@ -32,9 +32,8 @@ brew install --cask spotify
 ### dog = much nicer than dig command and more detailed
 ### z = a smart cd that auto-remembers where you went in the past and get you there fast
 ### gping = like ping with graphs
-brew install bat exa git-delta duf broot fd ripgrep tldr bottom hyperfine gping httpie dog zoxide gping brew choose-rust
-brew install mcfly
-grep -q 'eval "$(mcfly init bash)"' ~/.bashrc || echo 'eval "$(mcfly init bash)"' >> ~/.bashrc # add it if it doesnt exist (makes overall op idempotent)
+### font-hack-nerd-font = more glyphs for fonts. 
+brew install bat exa git-delta duf broot fd ripgrep tldr bottom hyperfine gping httpie dog zoxide gping brew choose-rust mcfly font-hack-nerd-font
 
 # Install Rust (and Cargo)
 brew install rustup
