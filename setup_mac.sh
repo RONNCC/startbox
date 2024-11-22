@@ -35,6 +35,9 @@ brew install --cask spotify
 ### font-hack-nerd-font = more glyphs for fonts. 
 brew install bat exa git-delta duf broot fd ripgrep tldr bottom hyperfine gping httpie dog zoxide gping brew choose-rust mcfly font-hack-nerd-font
 
+## Install powerline fonts also https://github.com/powerline since some zsh themes use those
+(d=$(mktemp -d) && cd "$d" && git clone https://github.com/powerline/fonts.git --depth=1 && cd fonts && ./install.sh && rm -rf "$d")
+
 # Install Rust (and Cargo)
 brew install rustup
 ### this downloads + installs a bunch 
