@@ -38,6 +38,9 @@ brew install bat exa git-delta duf broot fd ripgrep tldr bottom hyperfine gping 
 ## Install powerline fonts also https://github.com/powerline since some zsh themes use those
 (d=$(mktemp -d) && cd "$d" && git clone https://github.com/powerline/fonts.git --depth=1 && cd fonts && ./install.sh && rm -rf "$d")
 
+## Another guide for powerpack zsh installation
+# https://github.com/magicdude4eva/iterm-oh-my-zsh-powerlevel10k?tab=readme-ov-file
+
 # Install Rust (and Cargo)
 brew install rustup
 ### this downloads + installs a bunch 
