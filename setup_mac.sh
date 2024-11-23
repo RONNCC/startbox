@@ -33,7 +33,8 @@ brew install --cask spotify
 ### z = a smart cd that auto-remembers where you went in the past and get you there fast
 ### gping = like ping with graphs
 ### font-hack-nerd-font = more glyphs for fonts. 
-brew install bat exa git-delta duf broot fd ripgrep tldr bottom hyperfine gping httpie dog zoxide gping brew choose-rust mcfly font-hack-nerd-font
+### gh = for the github cli
+brew install bat exa git-delta duf broot fd ripgrep tldr bottom hyperfine gping httpie dog zoxide gping brew choose-rust mcfly font-hack-nerd-font gh
 
 ## Install powerline fonts also https://github.com/powerline since some zsh themes use those
 (d=$(mktemp -d) && cd "$d" && git clone https://github.com/powerline/fonts.git --depth=1 && cd fonts && ./install.sh && rm -rf "$d")
