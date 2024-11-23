@@ -138,10 +138,10 @@ brew install wget watch automake iproute2mac bash-completion docker-clean git pe
 brew install htop nvtop
 
 # Install git LFS
-brew install git-lfs
-
 # Pipenv is yarn for python (optional)
-brew install pipenv
+# node = for npm/etc
+# esbuild = fast builder for the js ecosystem
+brew install git-lfs pipenv esbuild
 
 # install handbrake for video converting (mov->mp4)
 # https://handbrake.fr/
