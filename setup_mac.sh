@@ -188,6 +188,10 @@ curl -o ~/.git-commit-message-template https://raw.githubusercontent.com/RONNCC/
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
 
+# Install the Tailscale app for private VPNs
+brew install mas # install mac app store cli
+mas install 1475387142 # install tailscale app
+
 # Install git fix-last
 curl -o ~/.git-fixlast.sh https://raw.githubusercontent.com/RONNCC/startbox/master/git-fixlast.sh
 
