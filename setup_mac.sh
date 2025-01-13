@@ -96,7 +96,8 @@ brew link --overwrite parallel
 
 
 # Install pipx for installing python "apps"
-brew install pipx
+# UV is the fastest python package manager (faster than poetry/pip).
+brew install pipx uv
 pipx ensurepath
 
 
