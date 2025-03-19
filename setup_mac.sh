@@ -56,13 +56,17 @@ cargo install ren-find rep-grep
 brew install pdfgrep
 
 # better bash/general autocomplete
-brew install fig
+# the replacement for Fig autocomplete after amazon bought it.
+brew install amazon-q 
 
 # AST-Grep for some tree-sitting code rewriting
 brew install ast-grep
 
 # Easily transfer an encrypted file to another computer via relay 
 brew install croc
+
+# Install a faster/lighter container runner than docker
+brew install orbstack
 
 # Install wireshark for analyzing packets
 brew install --cask wireshark # the cli + gui
@@ -134,6 +138,8 @@ brew install --cask osxfuse && brew install sshfs
 
 # General Brew Package Installs
 brew install wget watch automake iproute2mac bash-completion docker-clean git perl terminal-notifier xclip tmux reattach-to-user-namespace 
+
+# B
 
 # TOP for cpu and for gpu respectively
 brew install htop nvtop
