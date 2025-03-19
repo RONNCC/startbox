@@ -106,6 +106,7 @@ pipx ensurepath
 
 
 # Install "toolong" terminal log viewer (https://github.com/Textualize/toolong)
+#    this is good for really long/wide log files where you can search and tail them.
 pipx install toolong
 
 
