@@ -110,7 +110,9 @@ pipx ensurepath
 pipx install toolong
 
 # install onefilellm if it doesnt exist into the rghose_libs directory
-mkdir -p ~/src/rghose_libs && git clone https://github.com/jimmc414/onefilellm.git ~/src/rghose_libs/onefilellm
+# mkdir -p ~/src/rghose_libs && git clone https://github.com/jimmc414/onefilellm.git ~/src/rghose_libs/onefilellm
+echo -e "\n# Alias for onefilellm\nalias run_llm='PYO3_USE_ABI3_FORWARD_COMPATIBILITY=1 uv run --with-requirements=https://raw.githubusercontent.com/jimmc414/onefilellm/refs/heads/main/requirements.txt https://raw.githubusercontent.com/jimmc414/onefilellm/refs/heads/main/onefilellm.py'" >> ~/.bashrc
+echo -e "\n# Alias for onefilellm\nalias run_llm='PYO3_USE_ABI3_FORWARD_COMPATIBILITY=1 uv run --with-requirements=https://raw.githubusercontent.com/jimmc414/onefilellm/refs/heads/main/requirements.txt https://raw.githubusercontent.com/jimmc414/onefilellm/refs/heads/main/onefilellm.py'" >> ~/.zshrc
 
 # Mosh > SSH for intermittent connectivity ( *cough* bart)
 brew install mosh
