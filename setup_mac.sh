@@ -109,7 +109,8 @@ pipx ensurepath
 #    this is good for really long/wide log files where you can search and tail them.
 pipx install toolong
 
-
+# install onefilellm if it doesnt exist into the rghose_libs directory
+mkdir -p ~/src/rghose_libs && git clone https://github.com/jimmc414/onefilellm.git ~/src/rghose_libs/onefilellm
 
 # Mosh > SSH for intermittent connectivity ( *cough* bart)
 brew install mosh
