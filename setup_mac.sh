@@ -14,6 +14,9 @@ brew install --cask raycast
 # install spotify for music
 brew install --cask spotify
 
+# install f2 for batch filing renaming safely - https://github.com/ayoisaiah/f2?tab=readme-ov-file
+brew install f2
+
 # Better unix tool alternatives (from https://github.com/ibraheemdev/modern-unix) 
 ### Bat = cat /w syntax highlighting and line numbers
 ### exa = ls  /w colors + git aware
