@@ -112,10 +112,13 @@ pipx ensurepath
 #    this is good for really long/wide log files where you can search and tail them.
 pipx install toolong
 
-# install onefilellm if it doesnt exist into the rghose_libs directory
+# install onefilellm if it doesnt exist into the rghose_libs directory 
+#  or maybe we use repomix since that's easier to install: https://github.com/yamadashy/repomix
 # mkdir -p ~/src/rghose_libs && git clone https://github.com/jimmc414/onefilellm.git ~/src/rghose_libs/onefilellm
-echo -e "\n# Alias for onefilellm\nalias onefilellm='PYO3_USE_ABI3_FORWARD_COMPATIBILITY=1 uv run --with-requirements=https://raw.githubusercontent.com/jimmc414/onefilellm/refs/heads/main/requirements.txt https://raw.githubusercontent.com/jimmc414/onefilellm/refs/heads/main/onefilellm.py'" >> ~/.bashrc
-echo -e "\n# Alias for onefilellm\nalias onefilellm='PYO3_USE_ABI3_FORWARD_COMPATIBILITY=1 uv run --with-requirements=https://raw.githubusercontent.com/jimmc414/onefilellm/refs/heads/main/requirements.txt https://raw.githubusercontent.com/jimmc414/onefilellm/refs/heads/main/onefilellm.py'" >> ~/.zshrc
+# echo -e "\n# Alias for onefilellm\nalias onefilellm='PYO3_USE_ABI3_FORWARD_COMPATIBILITY=1 uv run --with-requirements=https://raw.githubusercontent.com/jimmc414/onefilellm/refs/heads/main/requirements.txt https://raw.githubusercontent.com/jimmc414/onefilellm/refs/heads/main/onefilellm.py'" >> ~/.bashrc
+# echo -e "\n# Alias for onefilellm\nalias onefilellm='PYO3_USE_ABI3_FORWARD_COMPATIBILITY=1 uv run --with-requirements=https://raw.githubusercontent.com/jimmc414/onefilellm/refs/heads/main/requirements.txt https://raw.githubusercontent.com/jimmc414/onefilellm/refs/heads/main/onefilellm.py'" >> ~/.zshrc
+
+
 
 # Mosh > SSH for intermittent connectivity ( *cough* bart)
 brew install mosh
