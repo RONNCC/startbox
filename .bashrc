@@ -299,6 +299,7 @@ alias fixpep8='autopep8 --in-place --aggressive '
 
 # get largest files/directories
 alias ducks='du -hs * | sort -rh | head -10'
+alias mullvad_filter="uv run https://gist.githubusercontent.com/RONNCC/740d1039986e5b9fe7397fb31a59a101/raw/bd7815829753db6767f4c2a482744a67f06c6b03/mulvad-filter.py"
 
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
