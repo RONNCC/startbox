@@ -39,6 +39,9 @@ brew install f2
 ### gh = for the github cli
 brew install bat exa git-delta duf broot fd ripgrep tldr bottom hyperfine gping httpie dog zoxide gping brew choose-rust mcfly font-hack-nerd-font gh
 
+## RipGrep-all = ripgrep for non-text like pdfs
+brew install rga
+
 ## Install powerline fonts also https://github.com/powerline since some zsh themes use those
 (d=$(mktemp -d) && cd "$d" && git clone https://github.com/powerline/fonts.git --depth=1 && cd fonts && ./install.sh && rm -rf "$d")
 
