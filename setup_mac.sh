@@ -18,7 +18,7 @@ brew install --cask spotify
 brew install f2
 
 # Better unix tool alternatives (from https://github.com/ibraheemdev/modern-unix) 
-### Bat = cat /w syntax highlighting and line numbers
+### bat = cat /w syntax highlighting and line numbers
 ### exa = ls  /w colors + git aware
 ### delta = diff /w syntax-aware diffs + colors
 ### duf = du + colors, organization, human readable
