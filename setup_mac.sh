@@ -39,6 +39,9 @@ brew install f2
 ### gh = for the github cli
 brew install bat exa git-delta duf broot fd ripgrep tldr bottom hyperfine gping httpie dog zoxide gping brew choose-rust mcfly font-hack-nerd-font gh
 
+## Asitop - great dashboard for apple silicon; shows CPU, GPU, ANE, memory bandwidth in 1 view.
+brew install asitop
+
 ## RipGrep-all = ripgrep for non-text like pdfs
 brew install rga
 
