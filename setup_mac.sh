@@ -42,6 +42,9 @@ brew install bat exa git-delta duf broot fd ripgrep tldr bottom hyperfine gping 
 ## Asitop - great dashboard for apple silicon; shows CPU, GPU, ANE, memory bandwidth in 1 view.
 brew install asitop
 
+## MTR (like a better tracert + ping)
+brew install mtr
+
 ## RipGrep-all = ripgrep for non-text like pdfs
 brew install rga
 
